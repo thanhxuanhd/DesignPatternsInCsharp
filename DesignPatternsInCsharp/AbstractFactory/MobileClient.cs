@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// The 'Client' class
+    /// https://www.c-sharpcorner.com/article/abstract-factory-design-pattern-in-c-sharp/
     /// </summary>
     internal class MobileClient
     {
