@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsInCsharp.AbstractFactory
+﻿using System;
+
+namespace DesignPatternsInCsharp.AbstractFactory
 {
     /// <summary>
     /// The 'ProductB2' class
@@ -7,6 +9,7 @@
     {
         public string GetModelDetails()
         {
+            Console.WriteLine("GetModelDetails: SamsungGuru");
             return "Model: Samsung Guru\nRAM: NA\nCamera: NA\n";
         }
     }

@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsInCsharp.AbstractFactory
+﻿using System;
+
+namespace DesignPatternsInCsharp.AbstractFactory
 {
     /// <summary>
     /// The 'ConcreteFactory2' class.
@@ -7,11 +9,13 @@
     {
         public ISmartPhone GetSmartPhone()
         {
+            Console.WriteLine("SamsungGalaxy");
             return new SamsungGalaxy();
         }
 
         public INormalPhone GetNormalPhone()
         {
+            Console.WriteLine("SamsungGuru");
             return new SamsungGuru();
         }
     }

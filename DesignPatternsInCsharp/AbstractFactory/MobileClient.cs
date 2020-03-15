@@ -1,4 +1,6 @@
-﻿namespace DesignPatternsInCsharp.AbstractFactory
+﻿using System;
+
+namespace DesignPatternsInCsharp.AbstractFactory
 {
     /// <summary>
     /// The 'Client' class
@@ -11,6 +13,7 @@
 
         public MobileClient(IMobilePhone factory)
         {
+            Console.WriteLine("factory" + factory.GetType().ToString());
             smartPhone = factory.GetSmartPhone();
             normalPhone = factory.GetNormalPhone();
         }
