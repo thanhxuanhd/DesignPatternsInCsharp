@@ -2,11 +2,13 @@
 using FactoryMethod = Design_Patterns.FactoryMethod;
 using AbstractFactory = Design_Patterns.AbstractFactory;
 using Builder = Design_Patterns.Builder;
+using Prototype = Design_Patterns.Prototype;
 
 namespace Design_Patterns
 {
     class Program
     {
+        [Obsolete]
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -19,6 +21,9 @@ namespace Design_Patterns
 
             // Builder
             new Builder.Client().Main();
+
+            // Prototype
+            new Prototype.Client().Main();
         }
     }
 }
