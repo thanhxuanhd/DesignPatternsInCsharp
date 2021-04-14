@@ -3,6 +3,8 @@ using FactoryMethod = Design_Patterns.FactoryMethod;
 using AbstractFactory = Design_Patterns.AbstractFactory;
 using Builder = Design_Patterns.Builder;
 using Prototype = Design_Patterns.Prototype;
+using NaiveSingleton = Design_Patterns.NaiveSingleton;
+using ThreadSafeSingleton = Design_Patterns.ThreadSafeSingleton;
 
 namespace Design_Patterns
 {
@@ -24,6 +26,12 @@ namespace Design_Patterns
 
             // Prototype
             new Prototype.Client().Main();
+
+            // NaiveSingleton
+            new NaiveSingleton.Client().Main();
+
+            // ThreadSafeSingleton
+            new ThreadSafeSingleton.Client().Main();
         }
     }
 }
