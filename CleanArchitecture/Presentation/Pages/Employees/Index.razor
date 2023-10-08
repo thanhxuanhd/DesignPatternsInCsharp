@@ -1,0 +1,33 @@
+﻿@page "/employees"
+@inject IClientService ClientService;
+
+<PageTitle>Employees</PageTitle>
+
+<h3>Employees</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    List<EmployeeModel> Model = new();
+
+    protected async override Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        Model = await ClientService.GetEmployees();
+    }
+}
